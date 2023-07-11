@@ -1,0 +1,19 @@
+syntax = "proto3";
+package api.v1.gomongodemo;
+
+option go_package = "./../pb;pb";
+option optimize_for = SPEED;
+
+import "api/v1/proto/definition/message.proto";
+
+service Service {
+	rpc CreateAccount (CreateAccountRequest) returns (CreateAccountResponse);
+
+	rpc ReadAccount (ReadAccountRequest) returns (ReadAccountResponse);
+
+	rpc ReadAccountByAccountNumber (ReadAccountByAccountNumberRequest) returns (ReadAccountByAccountNumberResponse);
+
+	rpc UpdateAccount (UpdateAccountRequest) returns (UpdateAccountResponse);
+
+	rpc DeleteAcount (DeleteAccountRequest) returns (DeleteAccountResponse);	
+}

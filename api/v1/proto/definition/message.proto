@@ -1,0 +1,66 @@
+syntax = "proto3";
+package api.v1.gomongodemo;
+
+option go_package = "./../pb;pb";
+
+message AccNumber{
+	int32 accno = 1;
+}
+
+message Name{
+	string name = 1;
+}
+
+message Balance{
+	double balance = 1;
+}
+
+message Account{
+  AccNumber accoun_no = 1;
+  Name customer_name = 2;
+  Balance balance = 3;
+}
+
+message AccountsCollection{
+	repeated Account accounts = 1;
+}
+
+message CreateAccountRequest{
+	Account account_details = 1;
+}
+
+message CreateAccountResponse{
+	bool create_account_success = 1;
+}
+
+message UpdateAccountRequest{
+	Account account_details = 1;
+}
+
+message UpdateAccountResponse{
+	bool update_account_success = 1;
+}
+
+message DeleteAccountRequest{
+	AccNumber accoun_no = 1;
+}
+
+message DeleteAccountResponse{
+	bool delete_account_success = 1;
+}
+
+message ReadAccountByAccountNumberRequest{
+	AccNumber accoun_no = 1;
+}
+
+message ReadAccountByAccountNumberResponse{
+	Account account_details = 1;
+}
+
+message ReadAccountRequest{
+	Account account_details = 1;
+}
+
+message ReadAccountResponse{
+	AccountsCollection accounts_collection = 1;
+}
