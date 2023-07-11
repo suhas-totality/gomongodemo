@@ -1,9 +1,0 @@
-export "SERVER_LOG_LEVEL"="0"
-export "SERVER_GRPC_PORT"="3800"
-export "SERVER_TIMEOUT_SECONDS"="30"
-
-export "MONGODB_URL"="mongodb+srv://%s:%s@myatlasclusteredu.wbt063j.mongodb.net/?retryWrites=true&w=majority"
-export "MONGODB_USERNAME"="myAtlasDBUser"
-export "MONGODB_PASSWORD"="yESv8MKGYrYCDdRA"
-export "MONGODB_DATABASE"="AccountsDB"
-export "MONGODB_COLLECTION"="AccountsCollection"
